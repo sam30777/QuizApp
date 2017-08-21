@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.example.android.quizapp.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/dhoni" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" MS DHONI: FAN APP"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="40sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="16dp"
+                android:text="  Giva answer of some simple questions \n  and prove your Msdhoni fan!! "
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="1.What is the full name of Ms dhoni? "
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/check_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:onClick="getAns" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="16dp"
+                android:text="2.from which teams dhoni played at dometic level"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="30sp" />
+
+            <CheckBox
+                android:id="@+id/check_right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="checkbox"
+                android:text="Bihar"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/check_right1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="checkbox"
+                android:text="Jharkhand"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/check_right2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chennai"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/check_right3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mumbai"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="3.which was the opposition team when dhoni made international debut "
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="30sp" />
+
+            <RadioGroup
+                android:id="@+id/radio1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/is_Clicked1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="plusScore1"
+                    android:text="Bangladesh" />
+
+                <RadioButton
+                    android:id="@+id/wrong_option"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="wrongOption"
+                    android:text="Pakistan" />
+
+                <RadioButton
+                    android:id="@+id/wrong_option1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="wrongOption1"
+                    android:text="Sri lanka" />
+
+                <RadioButton
+                    android:id="@+id/wrong_option2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="wrongOption2"
+                    android:text="Australia" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="16dp"
+                android:text="4.How many odi's centuries does dhoni have?"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="30sp" />
+
+            <RadioGroup
+                android:id="@+id/radio2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/decrement_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="decrementScore"
+                    android:text="12" />
+
+                <RadioButton
+                    android:id="@+id/decrement_score1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="decrementScore1"
+                    android:text="16" />
+
+                <RadioButton
+                    android:id="@+id/decrement_score2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="decrementScore2"
+                    android:text="19" />
+
+                <RadioButton
+                    android:id="@+id/is_Clicked2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="plusScore2"
+                    android:text="9" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="16dp"
+                android:text="5.what is the highest score of dhoni in odi's?"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="30sp" />
+
+            <RadioGroup
+                android:id="@+id/radio3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/is_Clicked3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="plusScore3"
+                    android:text="183" />
+
+                <RadioButton
+                    android:id="@+id/Question3_option2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="question3option2"
+                    android:text="151" />
+
+                <RadioButton
+                    android:id="@+id/Question3_option3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="question3option3"
+                    android:text="117" />
+
+                <RadioButton
+                    android:id="@+id/Question3_option4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="question3option4"
+                    android:text="176" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="16dp"
+                android:text="6. against which team he scored his highest score?"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="30sp" />
+
+            <RadioGroup
+                android:id="@+id/radio4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/is_Clicked4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="plusScore4"
+                    android:text="Sri lanka" />
+
+                <RadioButton
+                    android:id="@+id/question4_option2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="question4Option2"
+                    android:text="Bangladesh" />
+
+                <RadioButton
+                    android:id="@+id/question4_option3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="question4Option3"
+                    android:text="Pakistan" />
+
+                <RadioButton
+                    android:id="@+id/question4_option4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="question4Option4"
+                    android:text="Australia" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="16dp"
+                android:text="7.What is the name of Dhoni's wife"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="30sp" />
+
+            <RadioGroup
+                android:id="@+id/radio5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/is_Clicked5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="plusScore5"
+                    android:text="Sakshi" />
+
+                <RadioButton
+                    android:id="@+id/question5_option2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="question5Option2"
+                    android:text="Priyanka" />
+
+                <RadioButton
+                    android:id="@+id/question5_option3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="question5Option3"
+                    android:text="Supriya" />
+
+                <RadioButton
+                    android:id="@+id/question5_option4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="question5Option4"
+                    android:text="Priya" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="16dp"
+                android:text="8.Who is his idle as a cricketer "
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="30sp" />
+
+            <RadioGroup
+                android:id="@+id/radio6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/is_Clicked6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="plusScore6"
+                    android:text="Adam gilchrist" />
+
+                <RadioButton
+                    android:id="@+id/question6_option2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="question6Option2"
+                    android:text="Sachin Tendulkar" />
+
+                <RadioButton
+                    android:id="@+id/question6_option3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="question6Option3"
+                    android:text="Rahul dravid" />
+
+                <RadioButton
+                    android:id="@+id/question6_option4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="question6Option4"
+                    android:text="Virender Sehwag" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="16dp"
+                android:text="9.IN which yearhe became captain of T20 squad? "
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="30sp" />
+
+            <RadioGroup
+                android:id="@+id/radio7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/is_Clicked7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="plusScore7"
+                    android:text="2007" />
+
+                <RadioButton
+                    android:id="@+id/question7_option2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="question7Option2"
+                    android:text="2006" />
+
+                <RadioButton
+                    android:id="@+id/question7_option3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="question7Option3"
+                    android:text="2008" />
+
+                <RadioButton
+                    android:id="@+id/question7_option4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="question7Option4"
+                    android:text="2009" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="16dp"
+                android:text="10.What was the name of his grifreind who died in a car accident?"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="30sp" />
+
+            <RadioGroup
+                android:id="@+id/radio8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/question8_option2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="question8Option2"
+                    android:text="Sakshi" />
+                <RadioButton
+                    android:id="@+id/is_Clicked8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="plusScore8"
+                    android:text="Priyanka" />
+                <RadioButton
+                    android:id="@+id/question8_option3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="question8Option3"
+                    android:text="Supriya" />
+
+                <RadioButton
+                    android:id="@+id/question8_option4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="question8Option4"
+                    android:text="Priya" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:onClick="submitScore"
+                    android:text="SCORE"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:onClick="RESET"
+                    android:text="RESET"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/final_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:fontFamily="serif"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="30sp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
